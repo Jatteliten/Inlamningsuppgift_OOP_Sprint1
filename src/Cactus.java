@@ -9,6 +9,6 @@ public class Cactus extends Plants implements HousePlant {
     @Override
     public String getRequiredLiquid() { return PlantTypesEnum.CACTUS.liquid; }
     @Override
-    public double getDailyLiquidIntake() { return PlantTypesEnum.CARNIVOROUS_PLANT.dailyIntake(getHeight()); }
+    public double getDailyLiquidIntake() { return PlantTypesEnum.CACTUS.dailyIntake(getHeight()); }
 
 }
