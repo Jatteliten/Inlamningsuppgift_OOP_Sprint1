@@ -18,7 +18,6 @@ class PalmTreeTest {
     void getDailyLiquidIntake(){
         double expectedLiquidIntake = 0.5;
         double actualLiquidIntake = testPlant.getDailyLiquidIntake();
-
         Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
 
         actualLiquidIntake = testPlantOlof.getDailyLiquidIntake();
