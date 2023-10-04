@@ -25,4 +25,18 @@ class CarnivorousPlantTest {
         actualLiquidIntake = testPlantMeatloaf.getDailyLiquidIntake();
         Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
     }
+
+    @Test
+    void setHeight(){
+        testPlant.setHeight(10);
+        double expectedLiquidIntake = 2.1;
+        double actualLiquidIntake = testPlant.getDailyLiquidIntake();
+        Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
+
+        testPlant.setHeight(20);
+        expectedLiquidIntake = 4.1;
+        actualLiquidIntake = testPlant.getDailyLiquidIntake();
+        Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
+
+    }
 }

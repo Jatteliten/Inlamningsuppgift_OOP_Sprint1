@@ -5,8 +5,8 @@ public abstract class Plants {
     //Här förekommer inkapsling
     private String name;
     private double height;
-    private String species;
-    private String liquid;
+    private final String species;
+    private final String liquid;
     private double liquidAmount;
 
 
@@ -30,24 +30,14 @@ public abstract class Plants {
         return species;
     }
 
-    public void setSpecies(String species) {
-        this.species = species;
-    }
-
     public double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
+    public void setHeight(double height) { this.height = height; }
 
     public String getLiquid() {
         return liquid;
-    }
-
-    public void setLiquid(String liquid) {
-        this.liquid = liquid;
     }
 
     public double getLiquidAmount() {

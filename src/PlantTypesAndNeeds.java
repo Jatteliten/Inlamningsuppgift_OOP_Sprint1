@@ -1,4 +1,4 @@
-enum PlantTypesEnum {
+enum PlantTypesAndNeeds {
     PALM_TREE("Palm tree", "tap water"){
         @Override
         public double dailyIntake(double height){ return rounding(height*0.5); }
@@ -17,7 +17,7 @@ enum PlantTypesEnum {
     public final String species;
     public final String liquid;
 
-    PlantTypesEnum(String species, String liquid){
+    PlantTypesAndNeeds(String species, String liquid){
         this.species = species;
         this.liquid = liquid;
     }

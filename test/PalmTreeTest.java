@@ -28,5 +28,19 @@ class PalmTreeTest {
         Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
     }
 
+    @Test
+    void setHeight(){
+        testPlant.setHeight(10);
+        double expectedLiquidIntake = 5;
+        double actualLiquidIntake = testPlant.getDailyLiquidIntake();
+        Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
+
+        testPlant.setHeight(20);
+        expectedLiquidIntake = 10;
+        actualLiquidIntake = testPlant.getDailyLiquidIntake();
+        Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
+
+    }
+
 
 }
