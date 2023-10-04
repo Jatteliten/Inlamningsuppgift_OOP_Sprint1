@@ -15,7 +15,8 @@ class PalmTreeTest {
     @Test
     void getDailyLiquidIntake(){
         double expectedLiquidIntake = 0.5;
-        double actualLiquidIntake = (double) Math.round(plant.getDailyLiquidIntake() * 100) /100;
+        double actualLiquidIntake = (double) Math.round(PlantTypesEnum.PALM_TREE.dailyIntake(
+                plant.getHeight()) * 100) /100;
 
         Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
     }

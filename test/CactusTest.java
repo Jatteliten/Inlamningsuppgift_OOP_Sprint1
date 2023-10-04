@@ -15,7 +15,7 @@ class CactusTest {
     @Test
     void getDailyLiquidIntake() {
         double expectedLiquidIntake = 0.2;
-        double actualLiquidIntake = plant.getDailyLiquidIntake();
+        double actualLiquidIntake = PlantTypesEnum.CACTUS.dailyIntake(plant.getHeight());
         Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
     }
 }
