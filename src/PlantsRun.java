@@ -5,7 +5,7 @@ import java.util.List;
 public class PlantsRun {
     private int continueRunningCheck;
     private boolean runProgram = true;
-    List <Plants> dayCarePlantsList = new ArrayList<>();
+    private final List <Plants> dayCarePlantsList = new ArrayList<>();
 
     void run(){
         initializeDayCarePlantsList();

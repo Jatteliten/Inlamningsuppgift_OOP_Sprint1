@@ -5,20 +5,24 @@ import org.junit.jupiter.api.Test;
 class CarnivorousPlantTest {
 
 
-    CarnivorousPlant plant = new CarnivorousPlant("TestPlant", 1);
+    CarnivorousPlant testPlant = new CarnivorousPlant("TestPlant", 1);
+    CarnivorousPlant testPlantMeatloaf = new CarnivorousPlant("Meatloaf", 0.7);
 
     @Test
     void getRequiredLiquid(){
         String expectedLiquid = "protein";
-        String actualLiquid = plant.getRequiredLiquid();
+        String actualLiquid = testPlant.getRequiredLiquid();
         Assertions.assertEquals(expectedLiquid, actualLiquid);
     }
 
     @Test
     void getDailyLiquidIntake() {
         double expectedLiquidIntake = 0.3;
-        double actualLiquidIntake = (double) Math.round(PlantTypesEnum.CARNIVOROUS_PLANT.dailyIntake(
-                plant.getHeight()) * 100) /100;
+        double actualLiquidIntake = testPlant.getDailyLiquidIntake();
+        Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
+
+        expectedLiquidIntake = 0.24;
+        actualLiquidIntake = testPlantMeatloaf.getDailyLiquidIntake();
         Assertions.assertEquals(expectedLiquidIntake, actualLiquidIntake);
     }
 }

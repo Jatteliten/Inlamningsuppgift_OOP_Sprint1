@@ -1,9 +1,7 @@
 enum PlantTypesEnum {
     PALM_TREE("Palm tree", "tap water"){
         @Override
-        public double dailyIntake(double height){
-            return height*0.5;
-        }
+        public double dailyIntake(double height){ return rounding(height*0.5); }
     },
     CACTUS("Cactus", "mineral water"){
         @Override
@@ -13,9 +11,7 @@ enum PlantTypesEnum {
     },
     CARNIVOROUS_PLANT("Carnivorous plant", "protein"){
         @Override
-        public double dailyIntake(double height){
-            return 0.1 + (height * 0.2);
-        }
+        public double dailyIntake(double height){ return rounding(0.1 + (height * 0.2)); }
     };
 
     public final String species;
@@ -27,5 +23,9 @@ enum PlantTypesEnum {
     }
 
     public abstract double dailyIntake(double height);
+
+    public double rounding(double inputValue){
+        return (double) Math.round(inputValue * 100d) / 100d;
+    }
 
 }
