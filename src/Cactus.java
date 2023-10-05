@@ -12,13 +12,5 @@ public class Cactus extends Plants implements HousePlant {
     public String getRequiredLiquid() { return PlantTypesAndNeeds.CACTUS.liquid; }
     @Override
     public double getDailyLiquidIntake() { return PlantTypesAndNeeds.CACTUS.dailyIntake(getHeight()); }
-    @Override
-    public void setHeight(double height) {
-        if (height >= 0) {
-            super.setHeight(height);
-        } else {
-            JOptionPane.showMessageDialog(null, "Invalid height");
-        }
-    }
 
 }

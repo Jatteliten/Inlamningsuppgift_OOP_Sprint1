@@ -34,7 +34,13 @@ public abstract class Plants {
         return height;
     }
 
-    public void setHeight(double height) { this.height = height; }
+    public void setHeight(double height) {
+        if (height >= 0) {
+            this.height = height;
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid height");
+        }
+    }
 
     public String getLiquid() {
         return liquid;
