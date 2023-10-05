@@ -9,7 +9,7 @@ class PalmTreeTest {
 
     @Test
     void getRequiredLiquid(){
-        String expectedLiquid = "mineral water";
+        String expectedLiquid = "tap water";
         String actualLiquid = testPlant.getRequiredLiquid();
         Assertions.assertEquals(expectedLiquid, actualLiquid);
     }
