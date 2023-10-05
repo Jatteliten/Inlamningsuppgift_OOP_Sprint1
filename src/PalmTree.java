@@ -9,7 +9,7 @@ public class PalmTree extends Plants implements HousePlant {
 
     //här förekommer polymorfism
     @Override
-    public String getRequiredLiquid() { return PlantTypesAndNeeds.CACTUS.liquid; }
+    public String getRequiredLiquid() { return PlantTypesAndNeeds.PALM_TREE.liquid; }
     @Override
     public double getDailyLiquidIntake() { return PlantTypesAndNeeds.PALM_TREE.dailyIntake(getHeight()); }
     @Override
