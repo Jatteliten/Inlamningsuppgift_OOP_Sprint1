@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 public class Cactus extends Plants implements HousePlant {
 
     public Cactus(String name, double height) {
